@@ -313,7 +313,7 @@
             <!-- Video Player -->
             <div class="bg-black w-full">
                 <!-- NOTE: Hosting videos on GitHub is not recommended for production as it may lead to loading or playback issues. Consider using a dedicated video hosting service like YouTube, Vimeo, or a cloud provider. -->
-                <video class="w-full h-auto" controls poster="https://placehold.co/1200x675/1f2937/ffffff?text=Video+de+Presentación">
+                <video id="video-presentacion" class="w-full h-auto" controls poster="https://placehold.co/1200x675/1f2937/ffffff?text=Video+de+Presentación">
                     <source src="https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/prueba.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
@@ -425,6 +425,76 @@
             </div>
         </section>
         
+        <!-- Testimonials Carousel Section -->
+        <section class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 mb-8" aria-labelledby="carousel-heading">
+            <div class="text-center mb-6">
+                <h3 id="carousel-heading" class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Agradecimientos de los Aprobados</h3>
+                <p class="text-gray-600 dark:text-gray-300 mt-2 text-base">Capturas de alumnos que ya rindieron y aprobaron el EFIP 1 y 2 con mi metodología de estudio.</p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative group max-w-2xl mx-auto overflow-hidden rounded-xl shadow-lg bg-gray-900">
+                <!-- Slides Wrapper -->
+                <div id="carousel-slides" class="flex transition-transform duration-500 ease-out">
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/1.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/1.jpg';" alt="Agradecimiento alumno aprobado 1" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/2.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/2.jpg';" alt="Agradecimiento alumno aprobado 2" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/3.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/3.jpg';" alt="Agradecimiento alumno aprobado 3" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/4.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/4.jpg';" alt="Agradecimiento alumno aprobado 4" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/5.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/5.jpg';" alt="Agradecimiento alumno aprobado 5" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/6.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/6.jpg';" alt="Agradecimiento alumno aprobado 6" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/7.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/7.jpg';" alt="Agradecimiento alumno aprobado 7" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/8.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/8.jpg';" alt="Agradecimiento alumno aprobado 8" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex justify-center items-center p-2">
+                        <img src="IMG/9.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/IMG/9.jpg';" alt="Agradecimiento alumno aprobado 9" class="max-h-[500px] w-auto object-contain rounded-lg shadow">
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <button id="carousel-prev" aria-label="Imagen anterior" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="carousel-next" aria-label="Imagen siguiente" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+                <!-- Dots Indicators -->
+                <div id="carousel-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm"></div>
+            </div>
+
+            <!-- Instagram Stories Link Banner -->
+            <div class="mt-8 text-center bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 p-0.5 rounded-2xl shadow-md">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-[14px] flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-left">
+                        <p class="font-bold text-gray-900 dark:text-white text-lg flex items-center gap-2">
+                            <svg class="w-6 h-6 text-pink-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            ¡Hay mucho más en mis historias destacadas!
+                        </p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Mirá más agradecimientos y testimonios reales en Instagram.</p>
+                    </div>
+                    <a href="https://www.instagram.com/stories/highlights/18411544513099131/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold rounded-xl shadow-lg transition-transform transform hover:scale-105 whitespace-nowrap">
+                        Ver Historias Destacadas
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
         <!-- Testimonials Section -->
         <section class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 mb-8" aria-labelledby="testimonials-heading">
             <h3 id="testimonials-heading" class="text-2xl font-bold text-center text-gray-900 dark:text-white mb-6">Lo que dicen mis alumnos</h3>
@@ -475,6 +545,107 @@
     <script>
         // Set the current year in the footer automatically
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Reproducir automáticamente grupos.mp4 cuando finalice el video de presentación
+        const presentationVideo = document.getElementById('video-presentacion');
+        if (presentationVideo) {
+            presentationVideo.addEventListener('ended', function() {
+                if (!presentationVideo.src.includes('grupos.mp4')) {
+                    presentationVideo.src = 'https://raw.githubusercontent.com/sabrinagentile/Asesoria/main/grupos.mp4';
+                    presentationVideo.load();
+                    presentationVideo.play().catch(function(error) {
+                        console.log('Autoplay bloqueado por políticas del navegador:', error);
+                    });
+                }
+            });
+        }
+
+        // Lógica del Carrusel de Agradecimientos (IMG 1-9)
+        (function initCarousel() {
+            const slidesContainer = document.getElementById('carousel-slides');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dotsContainer = document.getElementById('carousel-dots');
+            
+            if (!slidesContainer) return;
+            
+            const totalSlides = slidesContainer.children.length;
+            let currentIndex = 0;
+            let autoplayInterval = null;
+
+            // Renderizar indicadores
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.ariaLabel = `Ir a imagen ${i + 1}`;
+                dot.className = `w-2.5 h-2.5 rounded-full transition-all ${i === 0 ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/80'}`;
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+
+            function updateCarousel() {
+                slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                const dots = dotsContainer.querySelectorAll('button');
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all bg-white scale-125';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition-all bg-white/50 hover:bg-white/80';
+                    }
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = (index + totalSlides) % totalSlides;
+                updateCarousel();
+                resetAutoplay();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(nextSlide, 4000);
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoplayInterval);
+                startAutoplay();
+            }
+
+            // Pausa al pasar el mouse por encima
+            const carouselBox = slidesContainer.parentElement;
+            carouselBox.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            carouselBox.addEventListener('mouseleave', startAutoplay);
+
+            // Soporte para gestos táctiles (swipe en celulares)
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carouselBox.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carouselBox.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchStartX - touchEndX > 40) {
+                    nextSlide();
+                } else if (touchEndX - touchStartX > 40) {
+                    prevSlide();
+                }
+            }, { passive: true });
+
+            startAutoplay();
+        })();
     </script>
 
 </body>
